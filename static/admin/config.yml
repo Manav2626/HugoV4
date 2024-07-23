@@ -8,7 +8,7 @@ public_folder: "/images/uploads" # Folder from where the files will be served
 collections:
   - name: "hero"
     label: "Hero Section"
-    folder: "content/home"
+    folder: "content/home/hero"
     create: true
     slug: "{{slug}}"
     fields:
@@ -20,7 +20,7 @@ collections:
       - { label: "Title 3", name: "title3", widget: "string" }
   - name: "about"
     label: "About Section"
-    folder: "content/home"
+    folder: "content/home/about"
     create: true
     slug: "{{slug}}"
     fields:
@@ -45,7 +45,7 @@ collections:
           - { label: "Color", name: "color", widget: "select", options: ["info", "success", "warning", "danger"] }
   - name: "doctors"
     label: "Doctors Section"
-    folder: "content/home"
+    folder: "content/home/doctors"
     create: true
     slug: "{{slug}}"
     fields:
@@ -64,7 +64,7 @@ collections:
           - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
   - name: "services"
     label: "Services Section"
-    folder: "content/home"
+    folder: "content/home/services"
     create: true
     slug: "{{slug}}"
     fields:
@@ -80,7 +80,7 @@ collections:
           - { label: "Description", name: "description", widget: "text" }
   - name: "blogs"
     label: "Blog Section"
-    folder: "content/home"
+    folder: "content/home/blogs"
     create: true
     slug: "{{slug}}"
     fields:
@@ -100,7 +100,7 @@ collections:
           - { label: "Link", name: "link", widget: "string" }
   - name: "contact"
     label: "Contact Section"
-    folder: "content/home"
+    folder: "content/home/contact"
     create: true
     slug: "{{slug}}"
     fields:
