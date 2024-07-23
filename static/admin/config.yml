@@ -43,7 +43,6 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Percentage", name: "percentage", widget: "number" }
           - { label: "Color", name: "color", widget: "select", options: ["info", "success", "warning", "danger"] }
-
   - name: "doctors"
     label: "Doctors Section"
     folder: "content/home"
@@ -63,7 +62,6 @@ collections:
           - { label: "Twitter", name: "twitter", widget: "string", required: false }
           - { label: "Google Plus", name: "google_plus", widget: "string", required: false }
           - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
-
   - name: "services"
     label: "Services Section"
     folder: "content/home"
@@ -73,12 +71,13 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Background Image", name: "background_image", widget: "image" }
-      - { label: "Services", name: "services", widget: "list", 
-          fields: 
-            - { label: "Icon", name: "icon", widget: "string" }
-            - { label: "Title", name: "title", widget: "string" }
-            - { label: "Description", name: "description", widget: "text" }
-        }
+      - label: "Services"
+        name: "services"
+        widget: "list"
+        fields: 
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
   - name: "blogs"
     label: "Blog Section"
     folder: "content/home"
@@ -88,16 +87,17 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Background Image", name: "background_image", widget: "image" }
-      - { label: "Posts", name: "posts", widget: "list", 
-          fields: 
-            - { label: "Title", name: "title", widget: "string" }
-            - { label: "Date", name: "date", widget: "datetime" }
-            - { label: "Author", name: "author", widget: "string" }
-            - { label: "Image", name: "image", widget: "image" }
-            - { label: "Icon", name: "icon", widget: "string" }
-            - { label: "Description", name: "description", widget: "text" }
-            - { label: "Link", name: "link", widget: "string" }
-        }
+      - label: "Posts"
+        name: "posts"
+        widget: "list"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime" }
+          - { label: "Author", name: "author", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Link", name: "link", widget: "string" }
   - name: "contact"
     label: "Contact Section"
     folder: "content/home"
@@ -107,16 +107,16 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Background Image", name: "background_image", widget: "image" }
-      - { label: "Contact Info", name: "contact_info", widget: "list", 
-          fields: 
-            - { label: "Icon", name: "icon", widget: "string" }
-            - { label: "Heading", name: "heading", widget: "string" }
-            - { label: "Text", name: "text", widget: "text" }
-        }
-      - { label: "Social Media", name: "social_media", widget: "list", 
-          fields: 
-            - { label: "Icon", name: "icon", widget: "string" }
-            - { label: "Link", name: "link", widget: "string" }
-        }
-
-
+      - label: "Contact Info"
+        name: "contact_info"
+        widget: "list"
+        fields: 
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Text", name: "text", widget: "text" }
+      - label: "Social Media"
+        name: "social_media"
+        widget: "list"
+        fields: 
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
