@@ -19,29 +19,31 @@ collections:
       - { label: "Title 2", name: "title2", widget: "string" }
       - { label: "Title 3", name: "title3", widget: "string" }
   - name: "about"
-    label: "About Section"
-    folder: "content/home"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Background Image", name: "background_image", widget: "image" }
-      - { label: "Section Title", name: "section_title", widget: "string" }
-      - { label: "Intro Text", name: "intro_text", widget: "text" }
-      - { label: "Who We Are Title", name: "who_we_are_title", widget: "string" }
-      - { label: "Who We Are Text", name: "who_we_are_text", widget: "text" }
-      - { label: "What We Do Title", name: "what_we_do_title", widget: "string" }
-      - { label: "What We Do Text", name: "what_we_do_text", widget: "text" }
-      - { label: "Vision Title", name: "vision_title", widget: "string" }
-      - { label: "Vision Text", name: "vision_text", widget: "text" }
-      - { label: "Progress Bars", name: "progress_bars", widget: "list",
-          fields: 
-            - { label: "Title", name: "title", widget: "string" }
-            - { label: "Percentage", name: "percentage", widget: "number" }
-            - { label: "Color", name: "color", widget: "select", options: ["info", "success", "warning", "danger"] }
-        }
+  label: "About Section"
+  folder: "content/home"
+  create: true
+  slug: "{{slug}}"
+  fields:
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Description", name: "description", widget: "string" }
+    - { label: "Image", name: "image", widget: "image" }
+    - { label: "Background Image", name: "background_image", widget: "image" }
+    - { label: "Section Title", name: "section_title", widget: "string" }
+    - { label: "Intro Text", name: "intro_text", widget: "text" }
+    - { label: "Who We Are Title", name: "who_we_are_title", widget: "string" }
+    - { label: "Who We Are Text", name: "who_we_are_text", widget: "text" }
+    - { label: "What We Do Title", name: "what_we_do_title", widget: "string" }
+    - { label: "What We Do Text", name: "what_we_do_text", widget: "text" }
+    - { label: "Vision Title", name: "vision_title", widget: "string" }
+    - { label: "Vision Text", name: "vision_text", widget: "text" }
+    - label: "Progress Bars"
+      name: "progress_bars"
+      widget: "list"
+      fields: 
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Percentage", name: "percentage", widget: "number" }
+        - { label: "Color", name: "color", widget: "select", options: ["info", "success", "warning", "danger"] }
+
   - name: "doctors"
     label: "Doctors Section"
     folder: "content/home"
