@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ $hero := .Site.GetPage "home/hero" }}
+{{ partial "home/hero" $hero }}
+{{ $about := .Site.GetPage "home/about" }}
+{{ partial "home/about" $about }}
+{{ $doctors := .Site.GetPage "home/doctors" }}
+{{ partial "home/doctors" $doctors }}
+{{ $services := .Site.GetPage "home/services" }}
+{{ partial "home/services" $services }}
+{{ $blogs := .Site.GetPage "home/blogs" }}
+{{ partial "home/blogs" $blogs }}
+{{ $contact := .Site.GetPage "home/contact" }}
+{{ partial "home/contact" $contact }}
+
+{{ end }}

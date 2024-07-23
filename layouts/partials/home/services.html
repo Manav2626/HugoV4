@@ -1,0 +1,28 @@
+<div id="section4">
+  <div class="section-lg side-image">
+      <div class="image-container col-mdl-1">
+          <div class="background-image-holder serivice-bg">
+              <img src="{{ .Params.background_image | relURL }}" alt="" class="background-image" style="display:none;">
+              <div class="bg-overlay-black text-center">
+                  <h2 class="uppercase font-bold font-white font90 animate-in" data-anim-type="fade-in-left" data-anim-delay="100">Services</h2>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-mdl-2">
+                  <div class="row">
+                      {{ range .Params.services }}
+                      <div class="col-md-6 col-sm-6 m-bottom2 m-top2">
+                          <i class="{{ .icon }} font-color font40 m-bottom3"></i>
+                          <h4 class="font16 uppercase font-bold font-black m-bottom1">{{ .title }}</h4>
+                          <p>{{ .description }}</p>
+                      </div>
+                      {{ end }}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

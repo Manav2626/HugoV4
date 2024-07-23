@@ -1,0 +1,90 @@
+<div id="section8">
+  <div class="section-lg m-top5 bg-color-style">
+      <div class="container">
+          <div class="row">
+              {{ range .Params.contact_info }}
+              <div class="col-md-4">
+                  <div class="address-info">
+                      <div class="icon"><i class="{{ .icon }} font-white"></i></div>
+                      <div class="text-info font-white">
+                          <h2 class="m-bottom1 font-white">{{ .heading }}</h2>
+                          <p>{{ .text | safeHTML }}</p>
+                      </div>
+                  </div>
+              </div>
+              {{ end }}
+          </div>
+      </div>
+  </div>
+  <div class="section-lg m-top0 bg-parallax-3">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-9 sec-auto-margin">
+                  <form action="demo-contacts-process.php" method="post" id="sky-form" class="sky-form font-white" novalidate>
+                      <fieldset>
+                          <div class="row">
+                              <section class="col col-6">
+                                  <label class="label">Name</label>
+                                  <label class="input">
+                                      <i class="icon-append fa fa-user"></i>
+                                      <input name="name" id="name" type="text">
+                                  </label>
+                              </section>
+                              <section class="col col-6">
+                                  <label class="label">E-mail</label>
+                                  <label class="input">
+                                      <i class="icon-append fa fa-envelope-o"></i>
+                                      <input name="email" id="email" type="email">
+                                  </label>
+                              </section>
+                          </div>
+                          <section>
+                              <label class="label">Subject</label>
+                              <label class="input">
+                                  <i class="icon-append fa fa-tag"></i>
+                                  <input name="subject" id="subject" type="text">
+                              </label>
+                          </section>
+                          <section>
+                              <label class="label">Message</label>
+                              <label class="textarea">
+                                  <i class="icon-append fa fa-comment"></i>
+                                  <textarea rows="4" name="message" id="message"></textarea>
+                              </label>
+                          </section>
+                          <section>
+                              <label class="checkbox">
+                                  <input name="copy" type="checkbox">
+                                  <i></i><small class="pull-left font-white">Send a copy to my e-mail address</small>
+                              </label>
+                          </section>
+                      </fieldset>
+                      <footer>
+                          <button type="submit" class="button button-secondary">Send message</button>
+                      </footer>
+                      <div class="message">
+                          <i class="fa fa-check"></i>
+                          <p>Your message was successfully sent!</p>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="copyrights m-top0">
+      <div class="container">
+          <div class="row text-center">
+              <h2 class="font-white">Social Media</h2>
+              <div class="col-md-5 sec-auto-margin m-top3">
+                  <ul class="social-icons">
+                      {{ range .Params.social_media }}
+                      <li><a href="{{ .link }}"><i class="fa {{ .icon }}"></i></a></li>
+                      {{ end }}
+                  </ul>
+              </div>
+              <div class="col-md-12 m-top2 text-center font-white"> Copyright &copy; 2016 yourdomian. All rights reserved. </div>
+          </div>
+      </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

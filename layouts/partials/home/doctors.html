@@ -1,0 +1,37 @@
+<div id="section3">
+  <div class="section-lg side-image">
+      <div class="image-container col-mdl-1 style-one">
+          <div class="background-image-holder style-one">
+              <img src="{{ .Params.background_image }}" alt="" class="background-image" style="display:none;">
+              <div class="bg-overlay-black style-black text-center">
+                  <h2 class="uppercase font-bold font-white font90 animate-in" data-anim-type="fade-in-left" data-anim-delay="100">Our Doctors</h2>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="col-mdl-2 style-one">
+              {{ $index := 0 }}
+              {{ range .Params.doctors }}
+              <div class="col-md-6 m-bottom4">
+                  <div class="team-grid style-one team-bg-image-{{ add $index 1 }}">
+                      <div class="image-popup text-center">
+                          <div class="prod-title">
+                              <h3>{{ .name }}</h3>
+                              <span>{{ .position }}</span>
+                              <div class="social-media">
+                                  {{ with .facebook }} <a href="{{ . }}" class="so-icons"><i class="fa fa-facebook"></i></a> {{ end }}
+                                  {{ with .twitter }} <a href="{{ . }}" class="so-icons"><i class="fa fa-twitter"></i></a> {{ end }}
+                                  {{ with .google_plus }} <a href="{{ . }}" class="so-icons"><i class="fa fa-google-plus"></i></a> {{ end }}
+                                  {{ with .linkedin }} <a href="{{ . }}" class="so-icons"><i class="fa fa-linkedin"></i></a> {{ end }}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              {{ $index = add $index 1 }}
+              {{ end }}
+          </div>
+      </div>
+  </div>
+  <div class="clearfix"></div>
+</div>

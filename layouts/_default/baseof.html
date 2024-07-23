@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }}</title>
+
+    <!-- LOADING FONTS AND ICONS -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,300,500,800" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Bootstrap -->
+    <link href="{{ "js/bootstrap/bootstrap.min.css" | relURL }}" rel="stylesheet">
+
+    <!--  CSS STYLES  -->
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" type="text/css" />
+    <link rel="stylesheet" href="{{ "css/reset.css" | relURL }}" type="text/css" />
+    <link rel="stylesheet" href="{{ "css/font-awesome/css/font-awesome.min.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/Simple-Line-Icons-Webfont/simple-line-icons.css" | relURL }}"/>
+    <link rel="stylesheet" href="{{ "css/et-line-font/et-line-font.css" | relURL }}">
+
+    <!-- Responsive Devices Styles -->
+    <link rel="stylesheet" media="screen" href="{{ "css/responsive-leyouts.css" | relURL }}" type="text/css" />
+
+    <!-- Mega Menu -->
+    <link rel="stylesheet" href="{{ "js/megamenu/stylesheets/screen.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "js/megamenu/stylesheets/onepage.css" | relURL }}">
+
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="{{ "js/revolution-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" | relURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "js/revolution-slider/fonts/font-awesome/css/font-awesome.min.css" | relURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "js/revolution-slider/css/settings.css" | relURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "js/revolution-slider/css/layers.css" | relURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "js/revolution-slider/css/navigation.css" | relURL }}">
+
+    <!-- load css for cubeportfolio -->
+    <link rel="stylesheet" type="text/css" href="{{ "js/cubeportfolio/css/cubeportfolio.min.css" | relURL }}">
+
+    <!-- Animations -->
+    <link href="{{ "js/animations/css/animations.min.css" | relURL }}" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- forms -->
+    <link rel="stylesheet" href="{{ "js/form/css/sky-forms.css" | relURL }}" type="text/css" media="all">
+</head>
+<body data-spy="scroll" data-target="#menu">
+    {{ partial "header.html" . }} 
+    {{ block "main" . }}{{ end }}
+    
+
+   <!-- Scroll Up -->
+<a href="#" class="scrollup"></a> 
+<!-- end scroll to top of the page--> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="{{ "js/jquery.min.js" | relURL }}"></script> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="{{ "js/jquery.js" | relURL }}"></script> 
+<script src="{{ "js/bootstrap/bootstrap.min.js" | relURL }}"></script> 
+<script src="{{ "js/functions.js" | relURL }}"></script> 
+
+<!-- Mega Menu --> 
+<script src="{{ "js/megamenu/js/main.js" | relURL }}"></script> 
+<script src="{{ "js/megamenu/js/onepage.js" | relURL }}"></script> 
+
+<!-- Load cubeportfolio --> 
+<script src="{{ "js/cubeportfolio/jquery-latest.min.js" | relURL }}"></script> 
+<script src="{{ "js/cubeportfolio/jquery.cubeportfolio.min.js" | relURL }}"></script> 
+
+<!-- Init cubeportfolio --> 
+<script src="{{ "js/cubeportfolio/main.js" | relURL }}"></script> 
+
+<!-- REVOLUTION JS FILES --> 
+<script src="{{ "js/revolution-slider/js/jquery.themepunch.tools.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/jquery.themepunch.revolution.min.js" | relURL }}"></script> 
+
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS -->
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.actions.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.carousel.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.migration.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.navigation.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.parallax.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js" | relURL }}"></script> 
+<script src="{{ "js/revolution-slider/js/extensions/revolution.extension.video.min.js" | relURL }}"></script> 
+
+<script>
+(function($) {
+  "use strict";
+  $(function() {
+    var tpj = jQuery;
+    var revapi110;
+    tpj(document).ready(function() {
+      if (tpj("#rev_slider_110_1").revolution === undefined) {
+        revslider_showDoubleJqueryError("#rev_slider_110_1");
+      } else {
+        revapi110 = tpj("#rev_slider_110_1").show().revolution({
+          sliderType: "hero",
+          jsFileLocation: "js/revolution-slider/js/",
+          sliderLayout: "fullscreen",
+          dottedOverlay: "none",
+          delay: 20000,
+          navigation: {},
+          responsiveLevels: [1240, 1024, 778, 778],
+          gridwidth: [1240, 1024, 778, 480],
+          gridheight: [600, 500, 400, 300],
+          lazyType: "none",
+          parallax: {
+            type: "mouse",
+            origo: "slidercenter",
+            speed: 2000,
+            levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+          },
+          shadow: 0,
+          spinner: "off",
+          autoHeight: "off",
+          fullScreenAlignForce: "off",
+          fullScreenOffsetContainer: "",
+          fullScreenOffset: "60px",
+          disableProgressBar: "on",
+          hideThumbsOnMobile: "off",
+          hideSliderAtLimit: 0,
+          hideCaptionAtLimit: 0,
+          hideAllCaptionAtLilmit: 0,
+          debugMode: false,
+          fallbacks: {
+            simplifyAll: "off",
+            disableFocusListener: false,
+          }
+        });
+
+        var api = revapi110,
+            ElementsToBlur = api.find('.toblur.tp-caption'),
+            ElementsToUnBlur = api.find('.tounblur.tp-caption'),
+            UnBlurFactor = 2,
+            UnBlurStart = 3,
+            UnBlurEnd = 0,
+            BlurStart = 0,
+            BlurEnd = 5,
+            BlurFactor = 2,
+            blurCall = new Object();
+
+        blurCall.inmodule = "parallax";
+        blurCall.atposition = "start";
+        blurCall.callback = function() {
+          var proc = api.revgetparallaxproc(),
+              blur = UnBlurStart + (proc * UnBlurStart * UnBlurFactor) + UnBlurEnd,
+              nblur = Math.abs(proc * BlurEnd * BlurFactor) + BlurStart;
+
+          blur = blur < UnBlurEnd ? UnBlurEnd : blur;
+          nblur = nblur > BlurEnd ? BlurEnd : nblur;
+
+          ElementsToUnBlur = jQuery(ElementsToUnBlur.selector);
+          punchgs.TweenLite.set(ElementsToUnBlur, {
+            '-webkit-filter': 'blur(' + (blur) + 'px)',
+            'filter': 'blur(' + (blur) + 'px)'
+          });
+          punchgs.TweenLite.set(ElementsToBlur, {
+            '-webkit-filter': 'blur(' + (nblur) + 'px)',
+            'filter': 'blur(' + (nblur) + 'px)'
+          });
+        }
+
+        api.bind("revolution.slide.layeraction", function(e) {
+          blurCall.callback();
+        });
+
+        api.bind("revolution.slide.onloaded", function(e) {
+          // revapi109.revaddcallback(blurCall);
+        });
+      }
+    }); /* ready */
+  });
+})(jQuery);
+</script>
+
+<!-- Scroll Up -->
+<script src="{{ "js/scrolltotop/totop.js" | relURL }}" type="text/javascript"></script> 
+
+<!-- Contact Form -->
+<script src="{{ "js/form/jquery.form.min.js" | relURL }}"></script> 
+<script src="{{ "js/form/jquery.validate.min.js" | relURL }}"></script> 
+
+<script>
+(function($) {
+  "use strict";
+  $(function() {
+    // Validation
+    $("#sky-form").validate({
+      // Rules for form validation
+      rules: {
+        name: {
+          required: true
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        message: {
+          required: true,
+          minlength: 10
+        },
+        captcha: {
+          required: true,
+          remote: 'captcha/process.php'
+        }
+      },
+
+      // Messages for form validation
+      messages: {
+        name: {
+          required: 'Please enter your name'
+        },
+        email: {
+          required: 'Please enter your email address',
+          email: 'Please enter a VALID email address'
+        },
+        message: {
+          required: 'Please enter your message'
+        },
+        captcha: {
+          required: 'Please enter characters',
+          remote: 'Correct captcha is required'
+        }
+      },
+
+      // Ajax form submission
+      submitHandler: function(form) {
+        $(form).ajaxSubmit({
+          beforeSend: function() {
+            $('#sky-form button[type="submit"]').attr('disabled', true);
+          },
+          success: function() {
+            $("#sky-form").addClass('submited');
+          }
+        });
+      },
+
+      // Do not change code below
+      errorPlacement: function(error, element) {
+        error.insertAfter(element.parent());
+      }
+    });
+  });
+})(jQuery);
+</script>
+
+<!-- Animations -->
+<script src="{{ "js/animations/animations.min.js" | relURL }}" type="text/javascript"></script> 
+<script src="{{ "js/animations/appear.min.js" | relURL }}" type="text/javascript"></script> 
+
+<!-- Counters -->
+<script src="{{ "js/aninum/jquery.animateNumber.min.js" | relURL }}"></script>
+
+</body>
+</html>

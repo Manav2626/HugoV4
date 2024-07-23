@@ -1,0 +1,26 @@
+<div id="section7">
+  <div class="section-lg m-top10">
+      <div class="container">
+          <div class="row">
+              {{ range .Params.posts }}
+              <div class="col-lg-4 col-sm-6 m-bottom4">
+                  <div class="post-cols">
+                      <div class="post-thumb">
+                          <div class="box-icon date"><i class="{{ .icon }}"></i></div>
+                          <div class="imgbox">
+                              <a href="{{ .link }}"><img src="{{ .image | relURL }}" alt="" class="img-responsive"></a>
+                          </div>
+                      </div>
+                      <div class="post-dis m-top2">
+                          <h4 class="m-bottom1 m-top1 font18"><a href="{{ .link }}">{{ .title }}</a></h4>
+                          <p class="m-top1">{{ .description }}</p>
+                          <p class="m-top2">{{ .date }} | <small>by {{ .author }}</small></p>
+                      </div>
+                  </div>
+              </div>
+              {{ end }}
+          </div>
+      </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
