@@ -8,9 +8,7 @@ public_folder: "/images/uploads" # Folder from where the files will be served
 collections:
   - name: "hero"
     label: "Hero Section"
-    folder: "content/home/hero"
-    create: true
-    slug: "{{slug}}"
+    file: "content/home/hero.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
@@ -20,9 +18,7 @@ collections:
       - { label: "Title 3", name: "title3", widget: "string" }
   - name: "about"
     label: "About Section"
-    folder: "content/home/about"
-    create: true
-    slug: "{{slug}}"
+    file: "content/home/about.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -45,9 +41,7 @@ collections:
           - { label: "Color", name: "color", widget: "select", options: ["info", "success", "warning", "danger"] }
   - name: "doctors"
     label: "Doctors Section"
-    folder: "content/home/doctors"
-    create: true
-    slug: "{{slug}}"
+    file: "content/home/doctors.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -64,9 +58,7 @@ collections:
           - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
   - name: "services"
     label: "Services Section"
-    folder: "content/home/services"
-    create: true
-    slug: "{{slug}}"
+    file: "content/home/services.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -80,9 +72,7 @@ collections:
           - { label: "Description", name: "description", widget: "text" }
   - name: "blogs"
     label: "Blog Section"
-    folder: "content/home/blogs"
-    create: true
-    slug: "{{slug}}"
+    file: "content/home/blogs.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -100,9 +90,7 @@ collections:
           - { label: "Link", name: "link", widget: "string" }
   - name: "contact"
     label: "Contact Section"
-    folder: "content/home/contact"
-    create: true
-    slug: "{{slug}}"
+    file: "content/home/contact.md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
