@@ -120,3 +120,5 @@ collections:
         fields: 
           - { label: "Icon", name: "icon", widget: "string" }
           - { label: "Link", name: "link", widget: "string" }
+
+
