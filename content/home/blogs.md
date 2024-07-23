@@ -27,11 +27,4 @@ posts:
     description: Excepteur sit occaecat cupidatan is proident sunt sedocca diam
       nonummy nibh epsum dollar sit occaecat cupidatan is proident sunt sedo.
     link: "#"
-  - date: 2024-07-23T16:15:00.000Z
-    title: New Post
-    author: Manav Rajani
-    icon: icon-pencil
-    description: "Something Something, Something "
-    link: "#"
-    image: /images/uploads/aid-2.png
 ---
